@@ -1,0 +1,17 @@
+---
+title: "PDF Link to Report"
+output: html_document
+resources: report.pdf
+links:
+  - text: report
+    href: report.pdf
+execute:
+  echo: false
+---
+
+Please clink on the link below to download the PDF of my report:
+
+```{r, results='asis'}
+pdf_path <- "./report_final.pdf"
+cat(sprintf('<a href="%s" download>Download PDF</a>', pdf_path))
+```
